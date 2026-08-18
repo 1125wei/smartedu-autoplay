@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "智慧教育平台自动连播",
+  "version": "2.7",
+  "description": "国家中小学智慧教育平台教师研修课程自动连播；支持后台播放与弹窗自动处理",
+  "content_scripts": [
+    {
+      "matches": ["*://basic.smartedu.cn/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["*://basic.smartedu.cn/*"]
+}
